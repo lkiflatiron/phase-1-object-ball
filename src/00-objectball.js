@@ -159,17 +159,6 @@ function shoeSize(nameParam) {
 
 //==================Team Colors=================//
 
-// function teamColors(team) {
-//   const object = gameObject()
-//   if (object.home.teamName === team) {
-//     return object.home.colors
-//   } else if (object.away.teamName === team) {
-//     return object.away.colors
-//   } else {
-//     return "Wrong team"
-//   }
-// }
-
 function teamColors(teamParam) {
   const gameObj = gameObject();
   for (let team in gameObj) {
@@ -217,7 +206,7 @@ function bigShoeRebounds() {
   const playerObj = allPlayers() 
   const shoeArray = []
   const playerArray = []
-  //create two arrays, player name and show size
+  //create two arrays, player name and shoe size
   for (let player in playerObj) {
     playerArray.push(player)
     shoeArray.push(playerObj[player].shoe)
@@ -279,6 +268,3 @@ function doesLongNameStealATon() {
   const mostSteals = Math.max(...stealArray);
   return allPlayerObj[longNamePlayer].steals === mostSteals 
 }
-
-
-console.log(doesLongNameStealATon())
